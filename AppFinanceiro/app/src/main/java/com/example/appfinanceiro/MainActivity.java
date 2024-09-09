@@ -48,8 +48,9 @@ public class MainActivity extends AppCompatActivity {
                     montante += aplicMensal; //aplicação + capinicial
                     montante *= (1 + taxa / 100); //capinicial + juros
                 }
-                String resultado = "R$" + String.valueOf(montante);
-                textView6.setText(resultado);
+                double resultado = montante;
+                String texto = String.format("R$ %.2f", resultado);
+                textView6.setText(texto);
             }
         });
     }
